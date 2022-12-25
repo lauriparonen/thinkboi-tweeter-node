@@ -1,0 +1,94 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  
+  background-color: #ebe1f5;
+  
+}
+
+body {
+  font-family: Garamond, serif;
+}
+
+form {
+  
+} 
+
+#tweet-form {
+  display: flex; 
+  justify-content: center;
+
+  
+}
+
+#edit-api-button, #view-api-button {
+  background-color: #e5a4dc;
+  border: none;
+  color: #221733;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+  margin: 2px 1px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-family: inherit;
+}
+
+#save-draft-button, #send-tweet-button {
+  background-color: #4a2c7f;
+  border: none;
+  color: #d6c4eb;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+  margin: 2px 1px;
+  opacity: 0.6;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-family: inherit;
+}
+
+#tweet-form div {
+  display: block;
+}
+
+#tweet-form {
+  display: flex;
+  justify-content: center;
+}
+
+
+#edit-api-button:hover{
+  background-color: #4a2c7f;
+  color: #d6c4eb;
+}
+#view-api-button:hover {
+  background-color: #4a2c7f;
+  color: #d6c4eb;
+}
+
+#save-draft-button:hover {
+  background-color: #d6b8d3;
+  color: #4a2c7f;
+}
+
+#send-tweet-button:hover {
+  background-color: #e5a4dc;
+  color: #4a2c7f;
+}
+
+footer {
+  position: absolute;
+  justify-content: center;
+  top: 90%;
+  left: 0;
+  right: 0;
+}
