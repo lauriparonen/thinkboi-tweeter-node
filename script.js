@@ -1,10 +1,10 @@
 const textArea = document.getElementById('tweet-box');
 
-const counter = 
+const counter =
 
-textArea.addEventListener('input', updateCounter);
+  textArea.addEventListener('input', updateCounter);
 
 function updateCounter() {
-  const count = 280 - textArea.value.length;
+  const count = 140 - textArea.value.length;
   counter.innerHTML = count; // connect to the textfield element
 }
