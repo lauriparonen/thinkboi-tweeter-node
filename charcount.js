@@ -34,6 +34,7 @@ let count = (myText.value).length;
 document.addEventListener('DOMContentLoaded', function() {
   const tweetBox = document.getElementById('tweet-box');
   const tweetCounter = document.getElementById('tweet-counter');
+  tweetCounter.innerHTML = 140;
   
   tweetBox.addEventListener('keyup', function () {
     const tweetLength = this.value.length;
