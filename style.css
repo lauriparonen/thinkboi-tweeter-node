@@ -103,3 +103,11 @@ footer {
   left: 0;
   right: 0;
 }
+
+#edit-api-button, #view-api-button {
+  float: left;
+}
+
+a {
+  float: right;
+}

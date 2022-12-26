@@ -7,10 +7,17 @@
 const tweetBox = document.getElementById('tweet-box');
 const tweetButton = document.getElementById('send-tweet-button');
 const lenCount = document.getElementById('tweet-counter');
+//const counter = document.append(div)
 
-tweetBox.addEventListener('input', function() {
-  const tweetLength = tweetBox.value.length;
-  lenCount.textContent = tweetLength;
+tweetBox.addEventListener('input', function(e) {
+  /*let tweetLength = (tweetBox.value).length;
+  document.innerHTML("tweet-counter").textContent = '${tweetLength}';
+  */
+  const target = e.target;
+  const tweetLength = target.value.length;
+
+  lenCount.innerHTML = 140 - '${tweetLength}';
+
 
   if (tweetLength > 140) {
     tweetButton.disabled = true;
@@ -18,3 +25,8 @@ tweetBox.addEventListener('input', function() {
     tweetButton.disabled = false;
   }
 });
+
+/**
+let count = (myText.value).length;
+    document.getElementById("count-result").textContent = `Total characters: ${count}`;
+*/
