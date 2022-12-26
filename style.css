@@ -30,7 +30,7 @@ header h4 {
   
 }
 
-#edit-api-button, #view-api-button {
+#edit-api-button, #view-api-button, #view-drafts-button {
   background-color: #e5a4dc;
   border: none;
   color: #221733;
@@ -77,11 +77,16 @@ header h4 {
 }
 
 
-#edit-api-button:hover{
+#edit-api-button:hover {
   background-color: #4a2c7f;
   color: #d6c4eb;
 }
 #view-api-button:hover {
+  background-color: #4a2c7f;
+  color: #d6c4eb;
+}
+
+#view-drafts-button:hover {
   background-color: #4a2c7f;
   color: #d6c4eb;
 }
