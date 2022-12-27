@@ -5,6 +5,7 @@
 let draftCounter = 0;
 document.addEventListener('DOMContentLoaded', function() {
 function saveDraft(draft) {
+  
   draftCounter++;
 
   const key = 'draft-${draftCounter}';
@@ -28,7 +29,8 @@ const saveDraftButton = document.getElementById('save-draft-button');
 
 saveDraftButton.addEventListener('click', function () {
   const draft = document.getElementById('tweet-box').value;
-  if (draft.length > 0) {saveDraft(draft);}
+  if (draft.length === 0) return;
+  saveDraft(draft);
 });
 
 const viewDraftsButton = document.getElementById('view-drafts-button');
