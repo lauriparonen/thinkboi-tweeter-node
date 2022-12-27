@@ -3,7 +3,7 @@
 */
 
 let draftCounter = 0;
-
+document.addEventListener('DOMContentLoaded', function() {
 function saveDraft(draft) {
   draftCounter++;
 
@@ -23,24 +23,20 @@ function viewDrafts() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+
 const saveDraftButton = document.getElementById('save-draft-button');
 
 saveDraftButton.addEventListener('click', function () {
   const draft = document.getElementById('tweet-box').value;
   saveDraft(draft);
 });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
 const viewDraftsButton = document.getElementById('view-drafts-button');
 
 viewDraftsButton.addEventListener('click', function() {
   viewDrafts();
 });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
 function emptyDrafts() {
   localStorage.clear();
   draftCounter = 0;
