@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
   tweetBox.addEventListener('keyup', function () {
     const tweetLength = this.value.length;
     tweetCounter.innerHTML = 140 - tweetLength;
-  });
+
   if (tweetLength > 140) {
-    tweetCounter.classList.add('tweet-counter-error')
+    tweetCounter.classList.add('tweet-counter-error');
     tweetButton.disabled = true;
     
   } else {
     tweetCounter.classList.remove('tweet-counter-error');
     tweetButton.disabled = false;
   }
-  
+  });
 });

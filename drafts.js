@@ -42,7 +42,7 @@ function emptyDrafts() {
   draftCounter = 0;
 }
 
-const emptyDraftsButton = document.getElementById('empty-drafts-button'):
+const emptyDraftsButton = document.getElementById('empty-drafts-button');
 
 emptyDraftsButton.addEventListener('click', function() {
   emptyDrafts();
