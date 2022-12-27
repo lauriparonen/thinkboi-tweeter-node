@@ -101,6 +101,14 @@ header h4 {
   color: #4a2c7f;
 }
 
+#send-tweet-button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
 footer {
   position: absolute;
   justify-content: center;
@@ -115,4 +123,8 @@ footer {
 
 a {
   float: right;
+}
+
+.tweet-counter-error {
+  color: darkred;
 }
