@@ -28,7 +28,7 @@ const saveDraftButton = document.getElementById('save-draft-button');
 
 saveDraftButton.addEventListener('click', function () {
   const draft = document.getElementById('tweet-box').value;
-  saveDraft(draft);
+  if (draft.length > 0) {saveDraft(draft);}
 });
 
 const viewDraftsButton = document.getElementById('view-drafts-button');
