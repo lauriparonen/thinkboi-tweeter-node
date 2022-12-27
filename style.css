@@ -30,7 +30,7 @@ header h4 {
   
 }
 
-#edit-api-button, #view-api-button, #view-drafts-button {
+#edit-api-button, #view-api-button, #view-drafts-button, #empty-drafts-button {
   background-color: #e5a4dc;
   border: none;
   color: #221733;
@@ -89,6 +89,11 @@ header h4 {
 #view-drafts-button:hover {
   background-color: #4a2c7f;
   color: #d6c4eb;
+}
+
+#empty-drafts-button:hover {
+  background-color: red;
+  color: #4a2c7f;
 }
 
 #save-draft-button:hover {
