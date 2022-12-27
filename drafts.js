@@ -38,8 +38,11 @@ viewDraftsButton.addEventListener('click', function() {
 });
 
 function emptyDrafts() {
+  if (confirm("You're about to clear all your drafted tweets. Are you sure?")) {
+    
   localStorage.clear();
   draftCounter = 0;
+  }
 }
 
 const emptyDraftsButton = document.getElementById('empty-drafts-button');
