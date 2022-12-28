@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const tweetLength = this.value.length;
     tweetCounter.innerHTML = 140 - tweetLength;
 
-  if (tweetLength > 140 || tweetLength === 0) {
+  if (tweetLength > 140) {
     tweetCounter.classList.add('tweet-counter-error');
     tweetButton.disabled = true;
+  } else if (tweetLength === 0) {
     saveDraftButton.disabled = true;
-    
   } else {
     tweetCounter.classList.remove('tweet-counter-error');
     tweetButton.disabled = false;
