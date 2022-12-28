@@ -5,9 +5,9 @@ web browser through a private server.
 This version contains no functionality beyond the webpage frontend
 
 TODO:
-- implement saving drafts
-- implement viewing drafts
-- finish tweet length counter
+- implement saving drafts (done 27.12.22)
+- implement viewing drafts (works on console; yet to implement showing on UI)
+- finish tweet length counter (done 27.12.22)
 
 - add node.js interaction with twitter api:
   intended to work whenever the script is running; when the server is not running, the user can save the drafts in a file
