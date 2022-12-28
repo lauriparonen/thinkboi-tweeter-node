@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const tweetBox = document.getElementById('tweet-box');
   const tweetCounter = document.getElementById('tweet-counter');
   const tweetButton = document.getElementById('send-tweet-button');
+  const saveDraftButton = document.getElementById('save-draft-button');
   
   tweetCounter.innerHTML = 140;
 
@@ -20,9 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
     tweetCounter.classList.add('tweet-counter-error');
     tweetButton.disabled = true;
     
+  } else if (tweetLength === 0) {
+    saveDraftButton.disabled = true;
+    tweetButton.disabled = true;
   } else {
     tweetCounter.classList.remove('tweet-counter-error');
     tweetButton.disabled = false;
+    saveDraftButton.disabled = false;
   }
   });
 });

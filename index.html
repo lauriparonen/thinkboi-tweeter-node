@@ -25,8 +25,16 @@
       <div>
         <div id="tweet-counter"></div>
         <button type="button" id="send-tweet-button">tweet</button>
-        <button type="button" id="save-draft-button">save draft?</button>
-      </div>
+        <button type="button" id="save-draft-button" onclick="draftSaved()">save draft?</button>
+        <script>
+          const saveDraftButton = document.getElementById('save-draft-button');
+          saveDraftButton.addEventListener('click', function () {
+            this.innerHTML = 'saved!';
+            setTimeout(() => {
+              this.innerHTML = 'save draft?';
+            },2000);
+          });
+        </script>
     </form>
   </main>
 

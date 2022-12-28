@@ -10,24 +10,22 @@ body {
   font-family: Garamond, serif;
 }
 
-header h2 {
+h2 {
   text-align: center;
   font-family: Garamond;
-  color: #160e1d;
+  color: #2f1d4b;
 }
 
-header h4 {
+h4 {
   text-align: center;
   font-family: Garamond;
   font-style: italic;
-  color: #221733;
+  color: #2f1d4b;
 }
 
 #tweet-form {
   display: flex; 
   justify-content: center;
-  
-  
 }
 
 #edit-api-button, #view-api-button, #view-drafts-button, #empty-drafts-button {
@@ -52,6 +50,8 @@ header h4 {
   background-color: #4a2c7f;
   border: none;
   color: #d6c4eb;
+  width: 80px;
+  height: 50px;
   padding: 8px 16px;
   border-radius: 4px;
   text-align: center;
@@ -92,7 +92,7 @@ header h4 {
 }
 
 #empty-drafts-button:hover {
-  background-color: red;
+  background-color: red; /* additional warning b4 user clears the drafts */
   color: #4a2c7f;
 }
 
@@ -106,7 +106,7 @@ header h4 {
   color: #4a2c7f;
 }
 
-#send-tweet-button:disabled {
+#send-tweet-button:disabled, #save-draft-button:disabled {
   opacity: 0.5;
   pointer-events: none;
   background-color: #ccc;
