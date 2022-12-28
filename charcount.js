@@ -9,8 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const tweetCounter = document.getElementById('tweet-counter');
   const tweetButton = document.getElementById('send-tweet-button');
   const saveDraftButton = document.getElementById('save-draft-button');
+
+    tweetCounter.innerHTML = 140;
   
-  tweetCounter.innerHTML = 140;
+  // Disable the buttons when the text area is empty 
+  if (tweetBox.value === "") {
+    tweetButton.disabled = true;
+    saveDraftButton.disabled = true;
+  }
+  
 
   // Event listener to update the count
   tweetBox.addEventListener('keyup', function () {
@@ -20,8 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
   if (tweetLength > 140) {
     tweetCounter.classList.add('tweet-counter-error');
     tweetButton.disabled = true;
-  } else if (tweetLength === 0) {
-    saveDraftButton.disabled = true;
   } else {
     tweetCounter.classList.remove('tweet-counter-error');
     tweetButton.disabled = false;
