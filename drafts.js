@@ -22,10 +22,17 @@ function saveDraft(draft) {
 function viewDrafts() {
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
+    
     if (key.startsWith('draft-')) {
       const draft = localStorage.getItem(key);
+      const  draftList = localStorage.getItem(key);
+      const draftItem = document.createElement('li');
+      draftItem.textContent = draft;
+      draftList.appendChild(draftItem);
       // display the draft
       console.log(draft); // for testing purposes
+    
+      
     }
   }
 }
@@ -42,8 +49,10 @@ saveDraftButton.addEventListener('click', function () {
 });
 
 const viewDraftsButton = document.getElementById('view-drafts-button');
+coonst savedDraftsElement = document.getElementById('saved-drafts');
 
 viewDraftsButton.addEventListener('click', function() {
+  savedDraftsElement.classList.toggle('hidden');
   viewDrafts();
 });
 

@@ -35,7 +35,22 @@
             },2000);
           });
         </script>
+        
     </form>
+    <div id="saved-drafts" class="hidden">
+        <h3>drafted tweets</h3>
+        <ul id="draft-list"></ul>
+        <button id="close-drafts-button" onclick="closeDrafts()">close</button>
+      <script>
+        function closeDrafts() {
+          const closeDraftsButton document.getElementById('close-drafts-button');
+
+          closeDraftsButton.addEventListener('click', function() {
+            savedDraftsElement.classList.toggle('hidden');
+          }
+        };
+      </script>
+    </div>
   </main>
 
   <!-- Footer -->

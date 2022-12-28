@@ -28,6 +28,11 @@ h4 {
   justify-content: center;
 }
 
+#tweet-box {
+  width: 300px;
+  height: 125px;
+}
+
 #edit-api-button, #view-api-button, #view-drafts-button, #empty-drafts-button {
   background-color: #e5a4dc;
   border: none;
@@ -132,4 +137,9 @@ a {
 
 .tweet-counter-error {
   color: darkred;
+}
+
+.hidden {
+  /*keeping the draft list hidden until toggled*/
+  display: none;
 }
