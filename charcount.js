@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (tweetLength > 140) {
     tweetCounter.classList.add('tweet-counter-error');
     tweetButton.disabled = true;
+  } else if (tweetLength === 0) {
+    tweetButton.disabled = true;
   } else {
     tweetCounter.classList.remove('tweet-counter-error');
     tweetButton.disabled = false;
