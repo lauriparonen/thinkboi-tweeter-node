@@ -25,13 +25,12 @@ function viewDrafts() {
     
     if (key.startsWith('draft-')) {
       const draft = localStorage.getItem(key);
-      const  draftList = localStorage.getItem(key);
-      const draftItem = document.createElement('li');
-      draftItem.textContent = draft;
-      draftList.appendChild(draftItem);
-      // display the draft
       console.log(draft); // for testing purposes
-    
+
+      // Display the draft elements in the savedDraftsElement div as a list
+      savedDraftsElement.innerHTML += `<li>${draft}</li>`;
+      savedDraftsElement.innerHTML += `<li>${draft} <button class="delete-draft-button">Delete</button></li>`;
+
       
     }
   }
@@ -70,4 +69,17 @@ const emptyDraftsButton = document.getElementById('empty-drafts-button');
 emptyDraftsButton.addEventListener('click', function() {
   emptyDrafts();
 });
+
+const closeDraftsButton = document.getElementById('close-drafts-button');
+
+closeDraftsButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  savedDraftsElement.style.display = 'none';
+});
+
+viewDraftsButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  savedDraftsElement.style.display = 'block';
+});
+
 });
