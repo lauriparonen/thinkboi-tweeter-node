@@ -49,7 +49,7 @@ saveDraftButton.addEventListener('click', function () {
 });
 
 const viewDraftsButton = document.getElementById('view-drafts-button');
-coonst savedDraftsElement = document.getElementById('saved-drafts');
+const savedDraftsElement = document.getElementById('saved-drafts');
 
 viewDraftsButton.addEventListener('click', function() {
   savedDraftsElement.classList.toggle('hidden');

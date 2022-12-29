@@ -32,7 +32,7 @@
             this.innerHTML = 'saved!';
             setTimeout(() => {
               this.innerHTML = 'save draft?';
-            },2000);
+            },1000);
           });
         </script>
         
@@ -40,15 +40,21 @@
     <div id="saved-drafts" class="hidden">
         <h3>drafted tweets</h3>
         <ul id="draft-list"></ul>
-        <button id="close-drafts-button" onclick="closeDrafts()">close</button>
+        <button id="close-drafts-button">close</button>
       <script>
-        function closeDrafts() {
-          const closeDraftsButton document.getElementById('close-drafts-button');
+          const savedDraftsElement = document.getElementById('saved-drafts');
+  const closeDraftsButton = document.getElementById('close-drafts-button');
+  const viewDraftsButton = document.getElementById('view-drafts-button');
 
-          closeDraftsButton.addEventListener('click', function() {
-            savedDraftsElement.classList.toggle('hidden');
-          }
-        };
+  closeDraftsButton.addEventListener('click', function() {
+    event.preventDefault();
+    savedDraftsElement.style.display = 'none';
+  });
+
+  viewDraftsButton.addEventListener('click', function() {
+     event.preventDefault();
+    savedDraftsElement.style.display = 'block';
+  });
       </script>
     </div>
   </main>
