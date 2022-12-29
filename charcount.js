@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     tweetButton.disabled = true;
   } else if (tweetLength === 0) {
     tweetButton.disabled = true;
+    saveDraftButton.disabled = true;
   } else {
     tweetCounter.classList.remove('tweet-counter-error');
     tweetButton.disabled = false;

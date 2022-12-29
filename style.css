@@ -138,8 +138,3 @@ a {
 .tweet-counter-error {
   color: darkred;
 }
-
-.hidden {
-  /*keeping the draft list hidden until toggled*/
-  display: none;
-}
