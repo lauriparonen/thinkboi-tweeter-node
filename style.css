@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   width: 100%;
   
-  background-color: #ebe1f5;
+  background-color: #000000;
   
 }
 
@@ -13,14 +13,14 @@ body {
 h2 {
   text-align: center;
   font-family: Garamond;
-  color: #2f1d4b;
+  color: #ffffff;
 }
 
 h4 {
   text-align: center;
   font-family: Garamond;
   font-style: italic;
-  color: #2f1d4b;
+  color: #ffffff;
 }
 
 #tweet-form {
@@ -34,9 +34,9 @@ h4 {
 }
 
 #edit-api-button, #view-api-button, #view-drafts-button, #empty-drafts-button {
-  background-color: #e5a4dc;
+  background-color: #ffffff;
   border: none;
-  color: #221733;
+  color: #000000;
   padding: 8px 16px;
   border-radius: 4px;
   text-align: center;
@@ -52,7 +52,7 @@ h4 {
 }
 
 #save-draft-button, #send-tweet-button {
-  background-color: #4a2c7f;
+  background-color: #000000;
   border: none;
   color: #d6c4eb;
   width: 80px;
@@ -83,38 +83,38 @@ h4 {
 
 
 #edit-api-button:hover {
-  background-color: #4a2c7f;
-  color: #d6c4eb;
+  background-color: #000000;
+  color: #638dff;
 }
 #view-api-button:hover {
-  background-color: #4a2c7f;
-  color: #d6c4eb;
+  background-color: #000000;
+  color: #638dff;
 }
 
 #view-drafts-button:hover {
-  background-color: #4a2c7f;
-  color: #d6c4eb;
+  background-color: #000000;
+  color: #638dff;
 }
 
-#empty-drafts-button:hover {
+#empty-drafts-button:hover, .delete-draft-button:hover {
   background-color: red; /* additional warning b4 user clears the drafts */
-  color: #4a2c7f;
+  color: #638dff;
 }
 
 #save-draft-button:hover {
-  background-color: #d6b8d3;
-  color: #4a2c7f;
+  background-color: #000000;
+  color: #638dff;
 }
 
 #send-tweet-button:hover {
-  background-color: #e5a4dc;
-  color: #4a2c7f;
+  background-color: #000000;
+  color: #638dff;
 }
 
 #send-tweet-button:disabled, #save-draft-button:disabled {
   opacity: 0.5;
   pointer-events: none;
-  background-color: #ccc;
+  /*background-color: #ccc;*/
   color: #999;
   cursor: not-allowed;
 }
@@ -135,6 +135,32 @@ a {
   float: right;
 }
 
+#tweet-counter {
+  float: right;
+  color: #ffffff;
+}
+
 .tweet-counter-error {
   color: darkred;
+}
+
+li {
+  list-style: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.delete-draft-button {
+  background-color: #000000;
+  color: #638dff;
+  opacity: 0.6;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-family: inherit;
+
+  border-radius: 4px;
 }

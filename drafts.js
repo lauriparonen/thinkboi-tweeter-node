@@ -28,11 +28,11 @@ function viewDrafts() {
       console.log(draft); // for testing purposes
 
       // Display the draft elements in the savedDraftsElement div as a list
-      savedDraftsElement.innerHTML += `<li>${draft}</li>`;
-      savedDraftsElement.innerHTML += `<li>${draft} <button class="delete-draft-button">Delete</button></li>`;
-
-      
-    }
+      savedDraftsElement.innerHTML = `<li>${draft} 
+                                     <button class="delete-draft-button">
+                                     delete</button></li>` + 
+                                     savedDraftsElement.innerHTML;
+}
   }
 }
 
@@ -51,6 +51,7 @@ const viewDraftsButton = document.getElementById('view-drafts-button');
 const savedDraftsElement = document.getElementById('saved-drafts');
 
 viewDraftsButton.addEventListener('click', function() {
+  
   savedDraftsElement.classList.toggle('hidden');
   viewDrafts();
 });
