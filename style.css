@@ -43,7 +43,8 @@ h4 {
   margin: 8px 0;
 }
 
-#edit-api-button, #view-api-button, #view-drafts-button, #empty-drafts-button {
+#edit-api-button, #view-api-button, #view-drafts-button, #empty-drafts-button,
+#info-button {
   background-color: #000000;
   border: none;
   color: #ffffff;
@@ -111,12 +112,8 @@ h4 {
   color: #ff6363;
 }
 
-#save-draft-button:hover {
-  background-color: #000000;
-  color: #638dff;
-}
-
-#send-tweet-button:hover {
+#save-draft-button:hover, #send-tweet-button:hover,
+#info-button:hover {
   background-color: #000000;
   color: #638dff;
 }
@@ -160,6 +157,25 @@ li {
   font-size: 14px;
   color: #333;
   margin: 10px 0;
+}
+
+#saved-drafts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #333;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  resize: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: #ffffff;
+  margin: 8px 0;
+  overflow: scroll;
 }
 
 .delete-draft-button {
