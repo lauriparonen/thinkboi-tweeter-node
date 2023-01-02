@@ -62,7 +62,7 @@ h4 {
   font-family: inherit;
 }
 
-#save-draft-button, #send-tweet-button {
+#save-draft-button, #send-tweet-button, #close-drafts-button {
   background-color: #000000;
   border: none;
   color: #d6c4eb;
@@ -113,7 +113,7 @@ h4 {
 }
 
 #save-draft-button:hover, #send-tweet-button:hover,
-#info-button:hover {
+#info-button:hover, #close-drafts-button:hover {
   background-color: #000000;
   color: #638dff;
 }
@@ -160,9 +160,17 @@ li {
 }
 
 #saved-drafts {
+  /*
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
   width: 400px;
   height: 200px;
   border: 1px solid #ccc;
@@ -189,4 +197,8 @@ li {
   font-family: inherit;
 
   border-radius: 4px;
+}
+
+.hidden {
+  display: none;
 }
